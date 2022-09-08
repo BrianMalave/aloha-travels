@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  height: 4.5rem;
+  width: 100%;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+  background-color: rgb(34, 165, 209);
+  padding: 1rem;
+}
+
+.filter input,
+.filter select {
+  height: 2.4rem;
+  width: 16%;
+}
+
+.filter select {
+  border-radius: 3px;
+  width: 16%;
+}
+
+.filter button {
+  height: 2.4rem;
+  width: 16%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  height: 2.375rem;
+  width: 10%;
+  margin-top: 0.438rem;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+}
+
+.filter button:active {
+  background: greenyellow;
+}

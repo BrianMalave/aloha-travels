@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  height: 12rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 100%;
+  padding-left: 3rem;
+  background-color: blueviolet;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.title-container {
+  width: 40%;
+  padding-left: 3rem;
+  align-items: center;
+  font-size: 30px;
+}
+
+.tittle-container,
+.input-container {
+  color: white;
+  font-family: "Ropa Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 7rem;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.alert {
+  color: red;
+}
+
+.no-alert {
+  color: white;
+}
