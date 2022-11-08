@@ -26,7 +26,7 @@ export default function App() {
       <Filters filteredValues={filters} setFilters={setFilters} />
       {filterList.length > 0 ? (
         <>
-          <div className="card-container">
+          <div className="content-container">
             {filterList.map((data, i) => {
               return (
                 <Hotels
@@ -35,8 +35,8 @@ export default function App() {
                   name={data.name}
                   photo={data.photo}
                   description={data.description}
-                  availableFrom={data.availabilityFrom}
-                  availableTo={data.availabilityTo}
+                  availabilityFrom={data.availabilityFrom}
+                  availabilityTo={data.availabilityTo}
                   rooms={data.rooms}
                   city={data.city}
                   country={data.country}

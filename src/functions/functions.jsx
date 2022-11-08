@@ -47,33 +47,32 @@ const putSizes = ({ sizes }) => {
   return message;
 };
 
-const putDates = ({ dateFROM, dateTO }) => {
+const putDates = ({ dateFrom, dateTo }) => {
   let message = "";
-  if (dateFROM === "" && dateTO === "") {
-    message = "Any date";
-  } else if (new Date(dateFROM).getTime() > new Date(dateTO).getTime()) {
-    message = "Invalid range of dates";
-  } else if (dateFROM !== "" && dateTO === "") {
-    message = `From ${Days[new Date(dateFROM + " 00:00:00").getDay()]}
-    ${new Date(dateFROM + " 00:00:00").getDate()} of
-    ${Months[(dateFROM + " 00:00:00").getMonth()]} of
-    ${new Date[new Date(dateFROM + " 00:00:00".getFullYear())]()}`;
-  } else if (dateFROM === "" && dateTO !== "") {
-    message = `To ${Days[new Date(dateTO + " 00:00:00".getDay())]}
-    ${new Date(dateTO + " 00:00:00".getDate())} of
-    ${Months[new Date(dateTO + " 00:00:00").getMonth()]} of
-    ${new Date(dateTO + " 00:00:00").getFullYear()}`;
-  } else if (dateFROM !== "" && dateTO !== "") {
-    message = `From ${Days[new Date(dateFROM + "00:00:00").getDay()]}
-    ${new Date(dateFROM + " 00:00:00").getDate()} of
-    ${Months[new Date(dateFROM + " 00:00:00").getMonth()]} of
-    ${new Date(dateFROM + " 00:00:00").getFullYear()} 
-
-    to ${Days[new Date(dateTO + " 00:00:00").getDay()]}
-
-    ${new Date(dateTO + " 00:00:00").getDate()} of 
-    ${Months[new Date(dateTO + " 00:00:00").getMonth()]} of 
-    ${new Date(dateTO + " 00:00:00").getFullYear()}`;
+  if (dateFrom === "" && dateTo === "") {
+    message = "Any Date";
+  } else if (new Date(dateFrom).getTime() > new Date(dateTo).getTime()) {
+    message = `Invalid rage of dates`;
+  } else if (dateFrom !== "" && dateTo === "") {
+    message = `From ${Days[new Date(dateFrom + " 00:00:00").getDay()]} 
+    ${new Date(dateFrom + " 00:00:00").getDate()}, on
+    ${Months[new Date(dateFrom + " 00:00:00").getMonth()]} of 
+    ${new Date(dateFrom + " 00:00:00").getFullYear()}`;
+  } else if (dateFrom === "" && dateTo !== "") {
+    message = `- till ${Days[new Date(dateTo + " 00:00:00").getDay()]} 
+    ${new Date(dateTo + " 00:00:00").getDate()}. on 
+    ${Months[new Date(dateTo + " 00:00:00").getMonth()]}, on 
+    ${new Date(dateTo + " 00:00:00").getFullYear()}`;
+  } else if (dateFrom !== "" && dateTo !== "") {
+    message = `From ${Days[new Date(dateFrom + " 00:00:00").getDay()]} 
+    ${new Date(dateFrom + " 00:00:00").getDate()}, on 
+    ${Months[new Date(dateFrom + " 00:00:00").getMonth()]} of 
+    ${new Date(dateFrom + " 00:00:00").getFullYear()} - till ${
+      Days[new Date(dateTo + " 00:00:00").getDay()]
+    } 
+    ${new Date(dateTo + " 00:00:00").getDate()}, on 
+    ${Months[new Date(dateTo + " 00:00:00").getMonth()]} of 
+    ${new Date(dateTo + " 00:00:00").getFullYear()}`;
   }
   return message;
 };
@@ -94,7 +93,7 @@ const getDateFrom = ({ availabilityFrom }) => {
   return (
     <>
       From {Days[new Date(availabilityFrom).getDay()]},{" "}
-      {new Date(availabilityFrom).getDate()} of{" "}
+      {new Date(availabilityFrom).getDate()} on{" "}
       {Months[new Date(availabilityFrom).getMonth()]} of{" "}
       {new Date(availabilityFrom).getFullYear()}
     </>
@@ -104,21 +103,21 @@ const getDateFrom = ({ availabilityFrom }) => {
 const getDateTo = ({ availabilityTo }) => {
   return (
     <>
-      From {Days[new Date(availabilityTo).getDay()]},{" "}
+      To {Days[new Date(availabilityTo).getDay()]},{" "}
       {new Date(availabilityTo).getDate()} of{" "}
       {Months[new Date(availabilityTo).getMonth()]} of{" "}
-      {new Date(availabilityTo).getFullYear}
+      {new Date(availabilityTo).getFullYear()}
     </>
   );
 };
 
-const checkDate = () => {
-  let dateFrom = new Date().setHours(0, 0, 0, 0);
-  let dateTo = new Date().setHours(0, 0, 0, 0);
+const checkDate = ({ dateFrom, dateTo }) => {
+  new Date(dateFrom).setHours(0, 0, 0, 0);
+  new Date(dateTo).setHours(0, 0, 0, 0);
   if (dateFrom > dateTo) {
-    return true;
+    return dateFrom;
   } else {
-    return false;
+    return dateTo;
   }
 };
 

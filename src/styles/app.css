@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "heebo";
 }
 
 .App {
@@ -15,9 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 85%;
   height: 50rem;
-  overflow-y: scroll;
   background-color: #fbfaf8;
 }
 
@@ -25,9 +26,8 @@
   display: flex;
   justify-content: space-evenly;
   width: 85%;
-  height: 50vh;
+  height: 70vh;
   overflow: hidden;
-  background-color: #fbfaf8;
 }
 
 .notfound img {
@@ -46,7 +46,7 @@
   position: absolute;
   top: 75%;
   align-items: center;
-  padding: 20px;
+  padding: 180px;
   text-align: center;
   font-weight: 700;
   font-size: 24px;

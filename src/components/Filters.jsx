@@ -63,11 +63,11 @@ const Filters = ({ filteredValues, setFilters }) => {
           name="prices"
           id="prices"
         >
-          <option value={Prices}>Any price</option>
-          <option value={"Cheap"}>Low priced</option>
-          <option value={"Comfort"}>Comfort</option>
-          <option value={"spectacular"}>Spectacular</option>
-          <option value={"Luxury"}>Luxury</option>
+          <option value="Prices">Any price</option>
+          <option value="1">Low priced $</option>
+          <option value="2">Comfort $$</option>
+          <option value="3">Spectacular $$$</option>
+          <option value="4">Luxury $$$$</option>
         </select>
         <select
           value={filteredValues.sizes}

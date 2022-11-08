@@ -44,5 +44,5 @@ export const Locations = {
   Arg: "Argentina",
   Chl: "Chile",
   Uru: "Uruguay",
-  Bra: "Brazil"
+  Bra: "Brasil"
 };

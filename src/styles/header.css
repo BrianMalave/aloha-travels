@@ -13,7 +13,7 @@
   width: 85%;
   height: 100%;
   padding-left: 3rem;
-  background-color: blueviolet;
+  background-color: #82bb85;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -28,7 +28,6 @@
 .tittle-container,
 .input-container {
   color: white;
-  font-family: "Ropa Sans";
   font-style: normal;
   font-weight: 400;
 }

@@ -17,7 +17,7 @@ const Header = ({ filteredValues }) => {
     <div className="header-container">
       <div className="header">
         <div className="title-container">
-          <h1>Hotels</h1>
+          <h1>Aloha Travels</h1>
         </div>
         <div className="input-container">
           <p
