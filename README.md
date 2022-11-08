@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Getting Started with Aloha-Travels(React-App)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Also, made for bootcamps purporses. This is an static-webpage for hotels booking with a data.js working as a API.
+Made for Front-end development courses from Acamica bootcamp.
 
 ## Available Scripts
 
